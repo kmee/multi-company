@@ -1,6 +1,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 import logging
+import base64
 
 from odoo import _, api, fields, models
 from odoo.exceptions import AccessError, UserError
@@ -71,6 +72,8 @@ class AccountMove(models.Model):
             src_invoice.with_company(dest_company.id).with_context(
                 skip_check_amount_difference=True
             )._inter_company_create_invoice(dest_company)
+            if src_invoice.move_type in ["out_invoice", "out_refund"]:
+                src_invoice._attach_original_pdf_report()
         # set invoice ref on supplier invoice when the customer invoice is validated
         # (case where the source invoice was the supplier one)
         for invoice in self.filtered(
@@ -78,6 +81,22 @@ class AccountMove(models.Model):
         ):
             invoice.sudo()._set_intercompany_supplier_invoice_ref()
         return res
+
+    def _attach_original_pdf_report(self):
+        supplier_invoice = self.auto_invoice_id
+        if not supplier_invoice:
+            supplier_invoice = self.search([("auto_invoice_id", "=", self.id)], limit=1)
+        pdf = self.env.ref("account.account_invoices")._render_qweb_pdf([self.id])[0]
+        self.env["ir.attachment"].create(
+            {
+                "name": self.name + ".pdf",
+                "type": "binary",
+                "datas": base64.b64encode(pdf),
+                "res_model": "account.move",
+                "res_id": supplier_invoice.id,
+                "mimetype": "application/pdf",
+            }
+        )
 
     def _check_intercompany_product(self, dest_company):
         self.ensure_one()
