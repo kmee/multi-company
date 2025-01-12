@@ -14,6 +14,7 @@ setuptools.setup(
         'odoo-addon-account_reconcile_model_multicompany_propagate>=16.0dev,<16.1dev',
         'odoo-addon-base_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-company_dependent_flag>=16.0dev,<16.1dev',
+        'odoo-addon-ir_config_parameter_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-mail_multicompany>=16.0dev,<16.1dev',
         'odoo-addon-mail_template_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-partner_account_multicompany_default>=16.0dev,<16.1dev',
