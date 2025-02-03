@@ -1,7 +1,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-import logging
 import base64
+import logging
 
 from odoo import _, api, fields, models
 from odoo.exceptions import AccessError, UserError
@@ -56,7 +56,7 @@ class AccountMove(models.Model):
             # do not consider invoices that have already been auto-generated,
             # nor the invoices that were already validated in the past
             dest_company = src_invoice._find_company_from_invoice_partner()
-            if not dest_company or src_invoice.auto_generated:
+            if not dest_company:
                 continue
             # If one of the involved companies have the intercompany setting disabled, skip
             if (
@@ -69,10 +69,11 @@ class AccountMove(models.Model):
                 src_invoice = src_invoice.with_user(intercompany_user).sudo()
             else:
                 src_invoice = src_invoice.sudo()
-            src_invoice.with_company(dest_company.id).with_context(
-                skip_check_amount_difference=True
-            )._inter_company_create_invoice(dest_company)
-            if src_invoice.move_type in ["out_invoice", "out_refund"]:
+            if not src_invoice.auto_generated:
+                src_invoice.with_company(dest_company.id).with_context(
+                    skip_check_amount_difference=True
+                )._inter_company_create_invoice(dest_company)
+            if src_invoice.is_sale_document():
                 src_invoice._attach_original_pdf_report()
         # set invoice ref on supplier invoice when the customer invoice is validated
         # (case where the source invoice was the supplier one)
@@ -86,7 +87,8 @@ class AccountMove(models.Model):
         supplier_invoice = self.auto_invoice_id
         if not supplier_invoice:
             supplier_invoice = self.search([("auto_invoice_id", "=", self.id)], limit=1)
-        pdf = self.env.ref("account.account_invoices")._render_qweb_pdf([self.id])[0]
+        report = self.env.ref("account.account_invoices").with_company(self.company_id)
+        pdf = report._render_qweb_pdf(report.report_name, [self.id])[0]
         self.env["ir.attachment"].create(
             {
                 "name": self.name + ".pdf",
