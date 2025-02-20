@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* calendar_event_multi_company
+# 	* calendar_event_multi_company
 #
 msgid ""
 msgstr ""
@@ -17,11 +17,14 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: calendar_event_multi_company
+#: model:ir.model,name:calendar_event_multi_company.model_calendar_event
+msgid "Calendar Event"
+msgstr ""
+
+#. module: calendar_event_multi_company
 #: model:ir.model.fields,field_description:calendar_event_multi_company.field_calendar_event__company_id
 msgid "Company"
 msgstr "Azienda"
 
-#. module: calendar_event_multi_company
-#: model:ir.model,name:calendar_event_multi_company.model_calendar_event
-msgid "Event"
-msgstr "Evento"
+#~ msgid "Event"
+#~ msgstr "Evento"
