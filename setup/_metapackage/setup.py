@@ -19,6 +19,7 @@ setuptools.setup(
         'odoo-addon-crm_tag_multi_company_event_crm>=16.0dev,<16.1dev',
         'odoo-addon-crm_tag_multi_company_sale>=16.0dev,<16.1dev',
         'odoo-addon-ir_config_parameter_multi_company>=16.0dev,<16.1dev',
+        'odoo-addon-login_all_company>=16.0dev,<16.1dev',
         'odoo-addon-mail_multicompany>=16.0dev,<16.1dev',
         'odoo-addon-mail_template_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-partner_account_multicompany_default>=16.0dev,<16.1dev',

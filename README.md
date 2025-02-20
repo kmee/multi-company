@@ -32,6 +32,7 @@ addon | version | maintainers | summary
 [crm_tag_multi_company_event_crm](crm_tag_multi_company_event_crm/) | 16.0.1.0.0 |  | Ensure multi-company check in event lead rules tag ids
 [crm_tag_multi_company_sale](crm_tag_multi_company_sale/) | 16.0.1.0.0 |  | Ensure multi-company check in sale order tag ids
 [ir_config_parameter_multi_company](ir_config_parameter_multi_company/) | 16.0.1.0.1 | [![deniscraciungabriel](https://github.com/deniscraciungabriel.png?size=30px)](https://github.com/deniscraciungabriel) [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Add res company field in ir config parameter
+[login_all_company](login_all_company/) | 16.0.0.0.0 |  | Access all your companies when you log in
 [mail_multicompany](mail_multicompany/) | 16.0.2.0.0 | [![luisg123v](https://github.com/luisg123v.png?size=30px)](https://github.com/luisg123v) | Email Gateway Multi company
 [mail_template_multi_company](mail_template_multi_company/) | 16.0.1.0.0 | [![Olivier-LAURENT](https://github.com/Olivier-LAURENT.png?size=30px)](https://github.com/Olivier-LAURENT) | Mail Template Multi Company
 [partner_account_multicompany_default](partner_account_multicompany_default/) | 16.0.0.1.0 | [![camptocamp](https://github.com/camptocamp.png?size=30px)](https://github.com/camptocamp) | Set a default account for all companies of a partners
