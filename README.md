@@ -40,7 +40,7 @@ addon | version | maintainers | summary
 [pos_category_multicompany](pos_category_multicompany/) | 16.0.1.0.0 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) [![quentinDupont](https://github.com/quentinDupont.png?size=30px)](https://github.com/quentinDupont) | Point of Sale Category in Multi company context
 [pos_restaurant_multi_company](pos_restaurant_multi_company/) | 16.0.1.0.0 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) | This module adds support for multi company on PoS Restaurant.
 [product_account_multicompany_default](product_account_multicompany_default/) | 16.0.0.2.0 | [![yajo](https://github.com/yajo.png?size=30px)](https://github.com/yajo) | Set a default account for all companies of a product
-[product_category_company](product_category_company/) | 16.0.1.0.1 |  | Product categories as company dependent
+[product_category_company](product_category_company/) | 16.0.1.1.0 |  | Product categories as company dependent
 [product_category_company_favorite](product_category_company_favorite/) | 16.0.1.0.1 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) | Possilibity to set favorite product categories per company
 [product_default_code_res_company_code](product_default_code_res_company_code/) | 16.0.1.0.0 |  | Generate product default code based on sequence defined by company, prefixed by company code
 [product_multi_company](product_multi_company/) | 16.0.1.0.2 |  | Select individually the product template visibility on each company
