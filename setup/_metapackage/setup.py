@@ -42,6 +42,7 @@ setuptools.setup(
         'odoo-addon-res_company_search_view>=16.0dev,<16.1dev',
         'odoo-addon-sale_partner_company>=16.0dev,<16.1dev',
         'odoo-addon-sale_product_company>=16.0dev,<16.1dev',
+        'odoo-addon-sale_product_company_multi_add>=16.0dev,<16.1dev',
         'odoo-addon-sale_stock_warehouse_multicompany>=16.0dev,<16.1dev',
         'odoo-addon-stock_intercompany>=16.0dev,<16.1dev',
         'odoo-addon-stock_intercompany_bidirectional>=16.0dev,<16.1dev',
