@@ -55,7 +55,7 @@ addon | version | maintainers | summary
 [sale_product_company](sale_product_company/) | 16.0.2.0.0 |  | Set selling companies on product
 [sale_stock_warehouse_multicompany](sale_stock_warehouse_multicompany/) | 16.0.1.0.0 |  | Allow multiple companies to sell the stock of a shared warehouse
 [stock_intercompany](stock_intercompany/) | 16.0.1.0.2 |  | Stock Intercompany Delivery-Reception
-[stock_intercompany_bidirectional](stock_intercompany_bidirectional/) | 16.0.1.0.1 |  | Bidirectional operations for the Stock Intercomany module
+[stock_intercompany_bidirectional](stock_intercompany_bidirectional/) | 16.0.1.0.3 |  | Bidirectional operations for the Stock Intercomany module
 
 [//]: # (end addons)
 
