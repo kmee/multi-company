@@ -13,6 +13,7 @@ setuptools.setup(
         'odoo-addon-account_multicompany_easy_creation>=16.0dev,<16.1dev',
         'odoo-addon-account_reconcile_model_multicompany_propagate>=16.0dev,<16.1dev',
         'odoo-addon-base_multi_company>=16.0dev,<16.1dev',
+        'odoo-addon-calendar_event_type_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-company_dependent_flag>=16.0dev,<16.1dev',
         'odoo-addon-crm_stage_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-crm_tag_multi_company>=16.0dev,<16.1dev',
